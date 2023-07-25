@@ -40,15 +40,14 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var appState = context.watch<MyAppState>();
+    var pair = appState.current;
 
     return Scaffold(
       body: Column(
         children: [
           Text('A random idea:'),
-          Text(appState.current.asLowerCase),
+          Text(pair.asLowerCase),
           Text('oluoch'),
-          Text(appState.current.asPascalCase),
-          Text(appState.current.asSnakeCase),
 
           // ↓ Add this.
           ElevatedButton(
